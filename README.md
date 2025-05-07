@@ -1,24 +1,18 @@
 # Informātikas darbs
 
-cd ..
-Pāriet uz augstāko direktoriju (atpakaļ vienu līmeni augšup no pašreizējās mapes).
+cd - Pāriet uz augstāko direktoriju (atpakaļ vienu līmeni augšup no pašreizējās mapes).
 
-cd Downloads
-Pāriet uz mapi ar nosaukumu Downloads, ja tā atrodas pašreizējā direktorijā.
+cd Downloads - Pāriet uz mapi ar nosaukumu Downloads, ja tā atrodas pašreizējā direktorijā.
 
-ls vai dir
-ls – Unix/Linux/MacOS komanda, kas uzrāda visus failus un mapes direktorijā.
+ls vai dir ls – Unix/Linux/MacOS komanda, kas uzrāda visus failus un mapes direktorijā.
 
 dir – Windows alternatīva, dara to pašu: parāda mapes saturu.
 
-read the guide
-Bieži redzams GitHub vai citās platformās kā aicinājums izlasīt dokumentāciju vai pamācību, lai saprastu, kā kaut ko lietot vai instalēt.
+read the guide - Bieži redzams GitHub vai citās platformās kā aicinājums izlasīt dokumentāciju vai pamācību, lai saprastu, kā kaut ko lietot vai instalēt.
 
-Repository name
-Repzitorija (repo) nosaukums – tas ir projekta nosaukums GitHub vai citā versiju kontroles sistēmā.
+Repository name - Repzitorija (repo) nosaukums – tas ir projekta nosaukums GitHub vai citā versiju kontroles sistēmā.
 
-Initialize this repository with README
-Izveido repo ar sākotnējo README failu. README ir teksta fails, kurā parasti paskaidrots, kas projekts dara un kā to lietot.
+Initialize this repository with README - Izveido repo ar sākotnējo README failu. README ir teksta fails, kurā parasti paskaidrots, kas projekts dara un kā to lietot.
 
 Clone or download
 Piedāvā iespēju:
