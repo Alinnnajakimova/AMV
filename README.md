@@ -1,5 +1,5 @@
 # Informātikas darbs
-kas ir cmd komandas rindā
+
 cd - Maina mapi.
 cd Downloads - Ieiet “Downloads” mapē.
 ls vai dir - Parāda mapes saturu (ls – Linux, dir – Windows).
