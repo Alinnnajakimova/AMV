@@ -1,21 +1,5 @@
 # Informātikas darbs
 
-cd - Maina mapi.
-cd Downloads - Ieiet “Downloads” mapē.
-ls vai dir - Parāda mapes saturu (ls – Linux, dir – Windows).
-read the guide - Atver pamācību.
-Repository name -  Projekta nosaukums GitHub.
-Initialize this repository with README - Izveido sākotnējo README failu.
-Clone or download - Lokālā klona izveidošana (Desktop-github) 
-git clone http - Nokopē repozitoriju uz datoru.
-commit - Izmaiņas, kuras obligāti jāapraksta
-git push - Grūst (repl.it => github.com)
-git pull - Novilkt sev (github.com => repl.it)
-pull request - Ierosina izmaiņas, ko citi var pievienot.
-es rakstu;;
-Kas ir CMD komandu rinda?
-CMD (Command Prompt) ir komandrindas interfeiss operētājsistēmā Windows, kurā var izpildīt komandas, lai pārvaldītu failus, mapes un programmas.
-
 cd ..
 Pāriet uz augstāko direktoriju (atpakaļ vienu līmeni augšup no pašreizējās mapes).
 
