@@ -1,0 +1,26 @@
+import random
+
+def ievadi_vardu():
+    """Pieprasa lietotāja vārdu un atgriež to."""
+    vards = input("Ievadi savu vārdu: ")
+    return vards.strip().capitalize()
+
+def radit_komplimentu(vards):
+    """Ģenerē un parāda nejaušu komplimentu ar ievadīto vārdu."""
+    komplimenti = [
+        f"{vards}, tu esi radošs un apņēmīgs!",
+        f"{vards}, tava enerģija iedvesmo citus!",
+        f"{vards}, tu dari pasauli labāku!",
+        f"{vards}, tev ir lieliska humora izjūta!",
+        f"{vards}, tu esi īsts draugs!",
+        f"{vards}, tava domāšana ir oriģināla un vērtīga!"
+    ]
+    print(random.choice(komplimenti))
+
+def galvena_programma():
+    vards = ievadi_vardu()
+    radit_komplimentu(vards)
+
+# Palaist programmu
+if __name__ == "__main__":
+    galvena_programma()
