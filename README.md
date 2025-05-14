@@ -43,3 +43,4 @@ Lejupielādē (pull) jaunākās izmaiņas no attālinātā repozitorija uz tavu 
 
 pull request
 Pieprasījums apvienot tavas izmaiņas ar galveno (piemēram, "main" vai "master") projektu. Bieži izmanto komandas projektos, lai pārskatītu un apstiprinātu kodu.
+че делать вообще не понимаю
