@@ -1,26 +1,43 @@
 import random
 
-def ievadi_vardu():
-    """Pieprasa lietotāja vārdu un atgriež to."""
-    vards = input("Ievadi savu vārdu: ")
-    return vards.strip().capitalize()
+# Funkcija lietotāja vārda ievadei
+def iegut_vardu():
+    return input("Kā tevi sauc? ")
 
-def radit_komplimentu(vards):
-    """Ģenerē un parāda nejaušu komplimentu ar ievadīto vārdu."""
+# Funkcija komplimenta ģenerēšanai
+def dot_komplimentu(vards):
     komplimenti = [
-        f"{vards}, tu esi radošs un apņēmīgs!",
-        f"{vards}, tava enerģija iedvesmo citus!",
-        f"{vards}, tu dari pasauli labāku!",
-        f"{vards}, tev ir lieliska humora izjūta!",
-        f"{vards}, tu esi īsts draugs!",
-        f"{vards}, tava domāšana ir oriģināla un vērtīga!"
+        f"{vards}, tu izskaties lieliski!",
+        f"{vards}, tev ir fantastisks prāts!",
+        f"{vards}, šodien tu esi izcils!",
+        f"{vards}, tu esi gudrs un talantīgs!"
     ]
     print(random.choice(komplimenti))
 
-def galvena_programma():
-    vards = ievadi_vardu()
-    radit_komplimentu(vards)
+# Bioloģijas jautājumi un atbildes
+jautajumi = {
+    "Kas ir fotosintēze?": "augu enerģijas ražošanas process",
+    "Kurš orgāns atbild par asins filtrāciju?": "nieres",
+    "Kāda ir galvenā DNS funkcija?": "ģenētiskās informācijas saglabāšana"
+}
 
-# Palaist programmu
-if __name__ == "__main__":
-    galvena_programma()
+# Funkcija testam
+def biologijas_tests():
+    vards = iegut_vardu()
+    dot_komplimentu(vards)
+
+    print("\nTagad daži jautājumi par bioloģiju:")
+    pareizas_atbildes = 0
+
+    for jautajums, pareiza_atbilde in jautajumi.items():
+        atbilde = input(f"{jautajums} ").lower()
+        if atbilde == pareiza_atbilde:
+            print("Pareizi!")
+            pareizas_atbildes += 1
+        else:
+            print(f"Nepareizi. Pareizā atbilde ir: {pareiza_atbilde}")
+
+    print(f"\n{vards}, tu atbildēji pareizi uz {pareizas_atbildes} jautājumiem no {len(jautajumi)}!")
+
+# Programmas palaišana
+biologijas_tests()
