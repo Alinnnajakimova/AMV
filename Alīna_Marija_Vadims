@@ -13,7 +13,11 @@ def dot_komplimentu(vards):
         f"{vards}, tu esi gudrs un talantīgs!"
     ]
     print(random.choice(komplimenti))
-
+# Bioloģijas jautājumi un atbildes
+jautajumi = {
+    "Kas ir fotosintēze?": "augu enerģijas ražošanas process",
+    "Kurš orgāns atbild par asins filtrāciju?": "nieres",
+    "Kāda ir galvenā DNS funkcija?": "ģenētiskās informācijas saglabāšana"
 
 }
 
