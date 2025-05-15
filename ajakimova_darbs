@@ -1,43 +1,62 @@
 import random
 
-# Funkcija lietotāja vārda ievadei
-def iegut_vardu():
-    return input("Kā tevi sauc? ")
+# Funkcija lietotājvārda ievadei
+def ievadi_vardu():
+    vards = input("Ievadi savu vārdu: ")
+    return vards
 
-# Funkcija komplimenta ģenerēšanai
-def dot_komplimentu(vards):
-    komplimenti = [
-        f"{vards}, tu izskaties lieliski!",
-        f"{vards}, tev ir fantastisks prāts!",
-        f"{vards}, šodien tu esi izcils!",
-        f"{vards}, tu esi gudrs un talantīgs!"
-    ]
-    print(random.choice(komplimenti))
-# Bioloģijas jautājumi un atbildes
-jautajumi = {
-    "Kas ir fotosintēze?": "augu enerģijas ražošanas process",
-    "Kurš orgāns atbild par asins filtrāciju?": "nieres",
-    "Kāda ir galvenā DNS funkcija?": "ģenētiskās informācijas saglabāšana"
-
-}
-
-# Funkcija testam
+# Funkcija bioloģijas testa veikšanai
 def biologijas_tests():
-    vards = iegut_vardu()
-    dot_komplimentu(vards)
+    jautajumi = [
+        {
+            "jautajums": "Kāds orgāns sūknē asinis cilvēka ķermenī?",
+            "atbilde": "sirds"
+        },
+        {
+            "jautajums": "Kāds ir DNS pilnais nosaukums?",
+            "atbilde": "dezoksiribonukleīnskābe"
+        },
+        {
+            "jautajums": "Kurš orgāns atbild par skābekļa apmaiņu?",
+            "atbilde": "plaušas"
+        }
+    ]
 
-    print("\nTagad daži jautājumi par bioloģiju:")
-    pareizas_atbildes = 0
+    pareizi = 0
+    for jaut in jautajumi:
+        atbilde = input(jaut["jautajums"] + " ").strip().lower()
+        if atbilde == jaut["atbilde"]:
+            pareizi += 1
 
-    for jautajums, pareiza_atbilde in jautajumi.items():
-        atbilde = input(f"{jautajums} ").lower()
-        if atbilde == pareiza_atbilde:
-            print("Pareizi!")
-            pareizas_atbildes += 1
-        else:
-            print(f"Nepareizi. Pareizā atbilde ir: {pareiza_atbilde}")
+    return pareizi, len(jautajumi)
 
-    print(f"\n{vards}, tu atbildēji pareizi uz {pareizas_atbildes} jautājumiem no {len(jautajumi)}!")
+# Funkcija rezultāta komentāram
+def iedrosinosha_zina(vards, pareizi, kopskaits):
+    procenti = pareizi / kopskaits * 100
+    if procenti == 100:
+        zinas = [
+            f"Teicami, {vards}! Tu esi īsts bioloģijas guru!",
+            f"Perfekts rezultāts, {vards}! Tā turpini!"
+        ]
+    elif procenti >= 66:
+        zinas = [
+            f"Labi padarīts, {vards}! Tu zini daudz par bioloģiju.",
+            f"Tu esi uz pareizā ceļa, {vards}!"
+        ]
+    else:
+        zinas = [
+            f"Nekas, {vards}, nākamreiz būs labāk!",
+            f"Turpini mācīties, {vards}, tev izdosies!"
+        ]
+    print(random.choice(zinas))
 
-# Programmas palaišana
-biologijas_tests()
+# Galvenā programma
+def galvena():
+    vards = ievadi_vardu()
+    pareizi, kopskaits = biologijas_tests()
+    print(f"\n{vards}, tu atbildēji pareizi uz {pareizi} no {kopskaits} jautājumiem.")
+    iedrosinosha_zina(vards, pareizi, kopskaits)
+
+# Palaist programmu
+if __name__ == "__main__":
+    galvena()
