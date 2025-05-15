@@ -1,11 +1,11 @@
+# tests par bioloģijas tēmu
+
 import random
 
-# Funkcija lietotājvārda ievadei
 def ievadi_vardu():
     vards = input("Ievadi savu vārdu: ")
     return vards
 
-# Funkcija bioloģijas testa veikšanai
 def biologijas_tests():
     jautajumi = [
         {
@@ -30,7 +30,6 @@ def biologijas_tests():
 
     return pareizi, len(jautajumi)
 
-# Funkcija rezultāta komentāram
 def iedrosinosha_zina(vards, pareizi, kopskaits):
     procenti = pareizi / kopskaits * 100
     if procenti == 100:
@@ -50,13 +49,11 @@ def iedrosinosha_zina(vards, pareizi, kopskaits):
         ]
     print(random.choice(zinas))
 
-# Galvenā programma
 def galvena():
     vards = ievadi_vardu()
     pareizi, kopskaits = biologijas_tests()
     print(f"\n{vards}, tu atbildēji pareizi uz {pareizi} no {kopskaits} jautājumiem.")
     iedrosinosha_zina(vards, pareizi, kopskaits)
 
-# Palaist programmu
 if __name__ == "__main__":
     galvena()
